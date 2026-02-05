@@ -541,6 +541,8 @@ static int imx219_s_ctrl(struct v4l2_ctrl *ctrl)
 	u16 a_gain = 256;
 	u16 d_gain = 1;
 
+	printk("imx219_s_ctrl id=0x%x val=0x%x\n", ctrl->id, ctrl->val);
+
 	switch (ctrl->id) {
 	case V4L2_CID_HFLIP:
 		priv->hflip = ctrl->val;
